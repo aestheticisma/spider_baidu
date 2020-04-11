@@ -1,3 +1,4 @@
+# -*- coding=utf-8 -*-
 '''
 author: 流岚
 date: 2020-4-10 20:45
@@ -17,7 +18,6 @@ import re
 import pandas as pd
 import re
 from count import count_data
-
 
 keyword_list = ['支付宝', '淘宝']
 url = 'https://www.baidu.com'
@@ -177,6 +177,7 @@ if __name__ == '__main__':
 	chrome_options.add_argument('--no-sandbox')
 	chrome_options.add_argument('--disable-gpu')
 	chrome_options.add_argument('--headless')
+	chrome_options.add_argument('--log-level=3')
 	browser = webdriver.Chrome(chrome_options=chrome_options) #'D:\Google\chromedriver', chrome_options=chrome_options
 	for num, keyword in enumerate(keyword_list):
 		title_list = []
